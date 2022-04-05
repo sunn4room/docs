@@ -9,6 +9,7 @@ Documents
    user-guide
    nginx
 
+.. toctree::
    :caption: fdsfds
    newdoc
 
