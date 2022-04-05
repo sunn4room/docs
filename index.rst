@@ -3,5 +3,5 @@ Contents:
 
 .. toctree::
 
-   ./Welcome_to_sunn4room's_blog.md
+   Welcome_to_sunn4room's_blog.md
 

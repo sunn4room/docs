@@ -9,7 +9,7 @@ if [ -n "${lists}" ]; then
 	echo ".. toctree::" >> index.rst
 	echo >> index.rst
 	for mdfile in `echo "${lists}"`; do
-		echo "   ${mdfile}" >> index.rst
+		echo "   ${mdfile:2}" >> index.rst
 	done
 	echo >> index.rst
 fi
