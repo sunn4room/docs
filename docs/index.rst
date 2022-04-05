@@ -8,6 +8,8 @@ Documents
 
    user-guide
    nginx
+
+   :caption: fdsfds
    newdoc
 
    newdir/index
