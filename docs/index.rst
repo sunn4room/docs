@@ -8,3 +8,4 @@ Documents
 
    user-guide
    nginx
+   newdoc
