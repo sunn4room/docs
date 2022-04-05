@@ -9,3 +9,5 @@ Documents
    user-guide
    nginx
    newdoc
+
+   newdir/index
