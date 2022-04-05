@@ -8,11 +8,8 @@ Documents
    user-guide
    nginx
 
-fdsfds
---------
-
 .. toctree::
-   :caption: Contents:
+   :caption: Contents
 
    newdoc
    newdir/index
