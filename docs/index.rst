@@ -12,6 +12,7 @@ fdsfds
 --------
 
 .. toctree::
+   :caption: Contents:
 
    newdoc
    newdir/index
