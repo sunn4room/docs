@@ -1,6 +1,4 @@
-# Common Linux Commands
-
-Common linux commands:
+# 常用 Linux 命令
 
 ## cut
 
