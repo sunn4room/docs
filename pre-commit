@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+echo "Contents:" > index.rst
+echo "===========" >> index.rst
+echo >> index.rst
+
+lists=`find . -maxdepth 1 -type f -regex ".+\.md" | sort`
+if [ -n "${lists}" ]; then
+	echo ".. toctree::" >> index.rst
+	echo >> index.rst
+	for mdfile in `echo "${lists}"`; do
+		echo "   ${mdfile}" >> index.rst
+	done
+	echo >> index.rst
+fi
+
+catas=`find . -maxdepth 1 -type d ! -path "." | sort`
+if [ -n "${catas}" ]; then
+	for cata in `echo "${catas}"`; do
+		lists=`find "${cata}" -maxdepth 1 -type f -regex ".+\.md" | sort`
+		if [ -n "${lists}" ]; then
+			title="${cata:2}"
+			title="${title//_/ }"
+			echo ".. toctree::" >> index.rst
+			echo "   :caption: ${title}" >> index.rst
+			echo >> index.rst
+			for mdfile in `echo "${lists}"`; do
+				echo "   ${mdfile:2}" >> index.rst
+			done
+			echo >> index.rst
+		fi
+	done
+fi
+
+git add index.rst
+
+cat index.rst
+
