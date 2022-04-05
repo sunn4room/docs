@@ -1,0 +1,14 @@
+# Common Linux Commands
+
+Common linux commands:
+
+## cut
+
+```shell
+cut -c 3-5 # 截取
+cut -b 3-5 # 以字节为单位
+cut -c 3- # 截取直到末尾
+cut -c -5 # 从头截取
+cut -f 1,3-5 # 以制表符为间隔，截取1、3、4、5域
+cut -d ' ' -f 1,3-5 # 以空格为间隔（不识别任意数量空格）
+```
