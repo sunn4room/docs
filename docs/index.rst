@@ -1,6 +1,3 @@
-project-name
-------------
-
 Documents
 =========
 .. toctree::
@@ -8,8 +5,11 @@ Documents
    user-guide
    nginx
 
+fdsfds
+=========
+
 .. toctree::
-   :caption: Contents
+   :caption: fdsfds
 
    newdoc
    newdir/index
