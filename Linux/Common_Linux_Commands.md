@@ -58,3 +58,13 @@ sed 's/xxx/yyy/1' # 只替换第一个
 ```
 
 > 友情链接：[GNU Sed](https://www.gnu.org/software/sed/manual/sed.html)
+
+## tr
+
+```shell
+tr "abc" "xyz" < FILE # abc 转 xyz
+tr [a-z] [A-Z] < FILE # 小写转大写
+tr -d "abc" < FILE # 删除a b c
+tr -s "\n" < FILE # 删除空行
+tr -d "\r" < FILE
+```

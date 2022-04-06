@@ -9,5 +9,6 @@ Contents:
    :caption: Linux
 
    Linux/Common_Linux_Commands.md
+   Linux/Regex.md
    Linux/Write_Shell_Script.md
 
