@@ -1,5 +1,85 @@
 # 并发编程
 
+## 线程
+
+```java
+// case 1
+Thread t = new Thread(() -> {
+    // ...
+});
+t.start();
+
+// case 2
+FutureTask<String> task = new FutureTask<>(() -> {
+    // ...
+    return "done";
+});
+new Thread(task).start();
+// 阻塞至得到"done"
+String result = task.get();
+
+// case 3
+// 定义线程类
+class MyThread extends Thread {
+    @Override
+    public void run() {
+        // ...
+    }
+}
+// 实例化线程类
+Thread t = new MyThread();
+t.start();
+```
+
+> 另见 [Thread API](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Thread.html)、[Runnable API](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Runnable.html)、[FutureTask API](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/FutureTask.html)
+
+### 线程状态
+
+| State         | Description                  |
+| ------------- | ---------------------------- |
+| NEW           | 未启动                       |
+| RUNNABLE      | 可执行，具体取决于系统调度   |
+| BLOCKED       | 因不能独占监视器而阻塞       |
+| WAITING       | 无限休眠，等待唤醒           |
+| TIMED_WAITING | 限时休眠，等待倒计时或者唤醒 |
+| TERMINATED    | 终止运行                     |
+
+> 另见 [Thread.State API](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Thread.State.html)
+
+### 线程中断
+
+强行结束线程的方法不安全，推荐使用中断来优雅地结束线程，如何中断将由线程自己决定。
+
+```java
+Thread t = new Thread(() -> {
+    while (true) {
+        if (Thread.interrupted()) {
+            // post handle
+            break;
+        }
+        // normal handle
+    }
+});
+t.start();
+// ...
+t.interrupt();
+```
+
+> 另见 [interrupt API](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Thread.html#interrupt())
+
+### 执行器
+
+
+
+## volatile
+
+| Time | Thread A           | Thread B          |
+| ---- | ------------------ | ----------------- |
+| 1    | actions before set | ...               |
+| 2    | set volatile       | ...               |
+| 3    | ...                | get volatile      |
+| 4    | ...                | actions after get |
+
 ## synchronized
 
 在 Java 中，每个对象都可以是一个监视器 moniter ，synchronized 通过独占监视器来实现同步代码的目的。
@@ -92,3 +172,4 @@ if (lock.tryLock()) {
 ### LockSupport
 
 线程阻塞原语，Lock 的相关实现都需要调用 LockSupport 的相关方法。另见 [LockSupport API](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/locks/LockSupport.html)
+
