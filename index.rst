@@ -6,6 +6,11 @@ Contents:
    Welcome_to_sunn4room's_blog.md
 
 .. toctree::
+   :caption: Test
+
+   Test/test.md
+
+.. toctree::
    :caption: Java
 
    Java/concurrent.md
