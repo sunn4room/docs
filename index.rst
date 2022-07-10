@@ -3,12 +3,17 @@ Contents:
 
 .. toctree::
 
-   Welcome_to_sunn4room's_blog.md
+   README.md
 
 .. toctree::
    :caption: Test
 
    Test/test.md
+
+.. toctree::
+   :caption: 数据结构与算法
+
+   数据结构与算法/子字符串匹配.md
 
 .. toctree::
    :caption: Java
