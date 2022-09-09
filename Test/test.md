@@ -7,3 +7,11 @@
 ```plantuml
 Bob->Alice
 ```
+
+```{plantweb}plantuml
+Bob->Alice
+```
+
+```{uml}plantuml
+Bob->Alice
+```
