@@ -2,6 +2,6 @@
 
 ## 图片
 
-```{uml} plantuml
+```{uml}
 Bob->Alice
 ```
