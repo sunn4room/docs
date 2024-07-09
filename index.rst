@@ -11,7 +11,7 @@ Contents:
    5_Rust/1_base.md
 
 .. toctree::
-   :caption: Other
+   :caption: 其他
 
-   9_Other/5_regexp.md
-   9_Other/9_demo.md
+   9_其他/5_regexp.md
+   9_其他/9_demo.md
