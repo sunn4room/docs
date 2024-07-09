@@ -18,9 +18,7 @@ public class Main {
 }
 ```
 
-## 图片
-
-### plantuml support
+### plantuml
 
 ```{uml}
 Bob->Alice

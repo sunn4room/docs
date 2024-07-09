@@ -6,6 +6,7 @@ Contents:
    README.md
 
 .. toctree::
-   :caption: Other Docs
+   :caption: Other
 
-   Other Docs/regexp.md
+   Other/demo.md
+   Other/regexp.md
