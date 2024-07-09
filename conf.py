@@ -1,6 +1,6 @@
 extensions = [
     'myst_parser',
-    'sphinx_rtd_theme',
+    'sphinx_book_theme',
     'plantweb.directive'
 ]
 
@@ -10,9 +10,10 @@ master_doc = 'index'
 
 project = 'sunn4room'
 
-html_theme = "sphinx_rtd_theme"
+html_theme = "sphinx_book_theme"
 
 html_theme_options = {
-    'sticky_navigation': False
+    'repository_url': 'https://github.com/sunn4room/docs',
+    'use_repository_button': True,
 }
 
