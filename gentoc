@@ -8,29 +8,10 @@ echo ".. toctree::"
 echo
 echo "   README.md"
 
-find . -maxdepth 1 -type d ! -path "." ! -path "./.git" ! -path "./draft" | sort | cut -c 3- | while read DIR; do
+find . -maxdepth 1 -type d ! -path "." | cut -c 3- | grep '^[0-9]_' | sort | while read DIR; do
 	echo
 	echo ".. toctree::"
-	echo "   :caption: ${DIR}"
+	echo "   :caption: ${DIR:2}"
 	echo
-	ls "${DIR}" | sed "s/^/   ${DIR}\\//"
+	ls "${DIR}" | sort | sed "s/^/   ${DIR}\\//"
 done
-#for cata in `echo "${catas}"`; do
-#	lists=`find "${cata}" -maxdepth 1 -type f -regex ".+\.md" | sort`
-#	if [ -n "${lists}" ]; then
-#		title="${cata:2}"
-#		title="${title//_/ }"
-#		echo ".. toctree::" >> index.rst
-#		echo "   :caption: ${title}" >> index.rst
-#		echo >> index.rst
-#		for mdfile in `echo "${lists}"`; do
-#			echo "   ${mdfile:2}" >> index.rst
-#		done
-#		echo >> index.rst
-#	fi
-#done
-#
-#git add index.rst
-#
-#cat index.rst
-
