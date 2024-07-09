@@ -1,7 +1,8 @@
 extensions = [
     'myst_parser',
     'sphinx_book_theme',
-    'plantweb.directive'
+    'plantweb.directive',
+    'sphinx_copybutton'
 ]
 
 source_suffix = ['.rst', '.md']
