@@ -1,4 +1,9 @@
-# Welcome to sunn4room's docs
+# 欢迎来到sunn4room的文档
 
-Welcome to sunn4room's docs
-
+```{toctree}
+:hidden:
+README
+regex
+rust/index
+demo
+```

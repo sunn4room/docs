@@ -1,0 +1,6 @@
+# Rust
+
+```{toctree}
+:hidden:
+base
+```

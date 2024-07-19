@@ -5,9 +5,9 @@ extensions = [
     'sphinx_copybutton'
 ]
 
-source_suffix = ['.rst', '.md']
+source_suffix = ['.md']
 
-master_doc = 'index'
+master_doc = 'README'
 
 project = 'sunn4room'
 
