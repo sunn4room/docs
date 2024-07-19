@@ -2,7 +2,7 @@
 
 ```{toctree}
 :hidden:
-README
+index
 regex
 rust/index
 demo

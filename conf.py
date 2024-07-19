@@ -7,7 +7,7 @@ extensions = [
 
 source_suffix = ['.md']
 
-master_doc = 'README'
+master_doc = 'index'
 
 project = 'sunn4room'
 
