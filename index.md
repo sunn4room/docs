@@ -2,8 +2,8 @@
 
 ```{toctree}
 :hidden:
-index
 regex
+linux/index
 rust/index
 demo
 ```

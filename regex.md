@@ -1,6 +1,6 @@
-# 正则表达式(regex)
+# Regex
 
-一个正则表达式(Regex)是一种从左到右匹配主体字符串的模式。
+Regex是一种从左到右匹配主体字符串的模式。
 
 > 友情链接：[learn-regex](https://github.com/ziishaned/learn-regex)
 
